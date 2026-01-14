@@ -1,0 +1,400 @@
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* VARIABLES - PALETA MINIMALISTA */
+:root {
+    /* Colores principales */
+    --color-primary: #0f172a;      
+    --color-accent: #3b82f6;       
+    --color-success: #10b981;
+    --color-danger: #ef4444;
+    --color-info: #06b6d4;
+    
+    /* Neutros */
+    --color-text: #1e293b;
+    --color-text-light: #64748b;
+    --color-border: #e2e8f0;
+    --color-background: #f8fafc;
+    --color-white: #ffffff;
+    
+    /* Sombras sutiles */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* RESET Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* CONTENEDOR */
+.container {
+    max-width: 900px;
+    padding: 24px;
+}
+
+/* TARJETAS - MINIMALISTA */
+.card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #cbd5e1;
+}
+
+/* Tarjeta de saldo principal */
+.card.mb-5 {
+    background: var(--color-primary);
+    border: none;
+    color: white;
+    padding: 40px 32px;
+}
+
+.card.mb-5 h2,
+.card.mb-5 p {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+}
+
+.card.mb-5 .display-5 {
+    color: white;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+/* BOTONES */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+    transition: all 0.2s ease;
+    border: none;
+    letter-spacing: -0.2px;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1e293b;
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #059669;
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #dc2626;
+}
+
+.btn-info {
+    background-color: var(--color-info);
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #0891b2;
+}
+
+.btn-secondary {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+/* Botones del menú principal */
+.row .btn {
+    padding: 20px;
+    font-size: 1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* INPUTS - ESTILO LIMPIO */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    background: var(--color-white);
+    font-family: 'Inter', sans-serif;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    outline: none;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    font-size: 0.875rem;
+}
+
+.input-group-text {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-right: none;
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+/* TIPOGRAFÍA */
+h1 {
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h3, h4, h5 {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.display-4,
+.display-5 {
+    font-weight: 700;
+    letter-spacing: -1.5px;
+}
+
+.text-muted {
+    color: var(--color-text-light) !important;
+    font-size: 0.95rem;
+}
+
+small {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+}
+
+/* TARJETA DE SALDO (secundarias) */
+.bg-light {
+    background-color: var(--color-background) !important;
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-success);
+}
+
+/* ALERTAS */
+.alert {
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 16px 20px;
+}
+
+.alert-success {
+    background-color: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #166534;
+}
+
+.alert-heading {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* PANTALLA INDEX Y LOGIN  */
+.min-vh-100 {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* Título en pantalla de bienvenida (index) */
+.min-vh-100 .text-center > h1 {
+    color: white;
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.min-vh-100 .text-center > .lead {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+/* Tarjeta de login */
+.min-vh-100 .card {
+    background: var(--color-white);
+    color: var(--color-text);
+}
+
+.min-vh-100 .card h1 {
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.min-vh-100 .card .form-label {
+    color: var(--color-text);
+}
+/* TRANSACCIONES */
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.card.mb-3 {
+    transition: all 0.2s ease;
+}
+
+.card.mb-3:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Colores de monto */
+.text-success {
+    color: var(--color-success) !important;
+    font-weight: 700;
+}
+
+.text-danger {
+    color: var(--color-danger) !important;
+    font-weight: 700;
+}
+
+/* SEPARADORES */
+hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 24px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .min-vh-100 h1 {
+        font-size: 2.5rem;
+    }
+
+    .display-5 {
+        font-size: 2.5rem !important;
+    }
+
+    .card {
+        margin-bottom: 16px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .row .btn {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ANIMACIONES SUTILES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.3s ease;
+}
+
+/* UTILIDADES */
+.shadow-sm {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+.shadow {
+    box-shadow: var(--shadow-md) !important;
+}
+
+.shadow-lg {
+    box-shadow: var(--shadow-lg) !important;
+}
+
+/* Espaciados consistentes */
+.py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+/* Bordes redondeados consistentes */
+.rounded {
+    border-radius: 8px !important;
+}
+
+.rounded-lg {
+    border-radius: 12px !important;
+}

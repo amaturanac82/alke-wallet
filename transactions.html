@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Movimientos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="mb-4">
+            <a href="menu.html" class="btn btn-secondary btn-sm mb-3">← Volver</a>
+            <h1 class="mb-2">Tus Movimientos</h1>
+            <p class="text-muted">Historial de transacciones recientes</p>  
+        </div>
+
+        <!-- Saldo Actual -->
+        <div class="card mb-4 p-3 bg-light">
+            <h5 class="text-muted mb-2">Saldo Actual</h5>
+            <div class="h4 text-success" id="saldoTotal">$5.000,00</div>
+        </div>
+
+        <!-- Historial -->
+        <div class="card p-4">
+            <h4 class="mb-4">Historial de transacciones</h4>
+
+            <!-- Transacción 1 -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title mb-1">💰 Depósito</h5>
+                            <p class="card-text text-muted mb-0">
+                                <small>02 de Enero, 2026</small>
+                            </p>
+                            <p class="card-text mb-0"> 
+                                <small>Concepto: Deuda Bruce</small>
+                            </p>
+                        </div>
+                        <div class="text-end">
+                            <h4 class="text-success mb-0">+ $150.00</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transacción 2 -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h5 class="card-title mb-1">📤 Transferencia</h5>
+                            <p class="card-text text-muted mb-0">
+                                <small>03 de Enero, 2026</small>
+                            </p>
+                            <p class="card-text mb-0">
+                                <small>Destinatario: Tony</small>
+                            </p>
+                            <p class="card-text mb-0"> 
+                                <small>Concepto: Pago Año nuevo</small>
+                            </p>
+                        </div>
+                        <div class="text-end">
+                            <h4 class="text-danger mb-0">- $150.00</h4>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
+            <!-- Mensaje si no hay transacciones -->
+            <div id="sinTransacciones" class="text-center text-muted d-none">
+                <p>No hay transacciones registradas</p>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <a href="menu.html" class="btn btn-primary w-100 py-2">
+                Volver al Menú Principal
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+    <script src="js/jquery.js"></script>
+</body>
+</html>
